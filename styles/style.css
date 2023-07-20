@@ -40,13 +40,15 @@ nav ul {
   gap: 40px;
 }
 
-nav ul li a, nav ul li  {
+nav ul li a,
+nav ul li {
   text-decoration: none;
   color: grey;
   cursor: pointer;
 }
 
-nav ul li a:hover, nav ul li:hover {
+nav ul li a:hover,
+nav ul li:hover {
   color: black;
 }
 
@@ -90,7 +92,7 @@ main {
   align-items: end;
 }
 
-.left{
+.left {
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -138,24 +140,20 @@ main {
   width: 450px;
 }
 
-
-
-.attribution{
+.attribution {
   margin-top: 100px;
   text-align: center;
 }
 
-
-.dropdown{
+.features-dropdown, .company-dropdown {
   position: relative;
 }
 
-
-.dropdown-menu{
+.features-dropdown-menu {
   width: 120px;
   position: absolute;
   background-color: white;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-top: 20px;
   right: 0;
@@ -167,12 +165,53 @@ main {
   opacity: 0;
 }
 
-.dropdown-menu p {
+.features-dropdown-menu p {
   display: flex;
   gap: 15px;
 }
 
-.dropdown-active{
+
+.company-dropdown-menu{
+  width: 75px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 20px;
+  right: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  gap: 20px;
+  opacity: 0;
+}
+
+
+
+.dropdown-active {
   opacity: 1;
 }
 
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    margin: auto;
+  }
+
+  .right {
+    margin: auto;
+    margin-top: 200px;
+    justify-content: center;
+  }
+}
